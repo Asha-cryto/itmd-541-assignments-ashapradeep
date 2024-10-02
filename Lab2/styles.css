@@ -5,6 +5,8 @@
     gap: 50px;
     list-style-type: none;
     margin-left: 11px;
+    margin-top: auto;
+    height: 22px;
 }
 
 /* end Flexbox Part 1 */
@@ -14,9 +16,11 @@
 
 #flex-section2 ul {
 	display: flex;
-    /* gap: 50px; */
     list-style-type: none;
     margin-left: -40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 150px;
 }
 
 #flex-section2 li {
@@ -24,7 +28,7 @@
 }
 
 #flex-section2 .item1 {
- order: 1;
+    order: 1;
 }
 
 #flex-section2 .item2 {
@@ -42,14 +46,18 @@
 
 #flex-section3 .box {
 	display: grid;            
-    place-items: center;  
+    place-items: center; 
+    
 }
 
 #flex-section3 .tags ul {
 	display: flex;
+    height: 45px;
     list-style-type: none;
     flex-wrap: wrap;
-    margin-left: -30px;
+    margin-left: -35px;
+    margin-top: 1px;
+
 }
 
 /* end Flexbox Part 3 */
@@ -93,7 +101,7 @@
     grid-template-columns: 1fr 1fr 1fr;   
     grid-template-rows: auto 1fr auto; 
     gap: 10px;                        
-    padding: 10px;
+    padding: 1px;
     height: 100vh; 
 }
 
