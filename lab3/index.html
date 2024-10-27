@@ -8,16 +8,19 @@
 </head>
 <body>
 
+    <div class="conversion-rates" id="conversionRates">
+        Conversion Rates:<br>
+        $1 USD = ₹84.07 INR<br>
+        $1 USD = ¥149.34 JPY
+    </div>
+
     <div class="container">
-        <p id="conversionRates">Conversion Rates:<br>
-            $1 USD = ₹84.07 INR, ¥149.34 JPY, ₽98.61 RUB
-        </p>
-        
         <form id="tip-form">
             <h1>Tip Calculator</h1>
 
             <label for="billAmount">Bill Total:</label>
             <input type="text" id="billAmount" placeholder="Enter bill amount">
+            <p id="errorMessage" class="error-message"></p> <!-- Error message below Bill Total -->
 
             <label for="tipPercentage">Tip Percentage:</label>
             <input type="range" id="tipPercentage" min="0" max="100">
@@ -34,10 +37,7 @@
                 <option value="usd" selected>USD ($)</option>
                 <option value="inr">INR (₹)</option>
                 <option value="jpy">JPY (¥)</option>
-                <option value="rub">RUB (₽)</option>
             </select>
-
-            <p id="errorMessage"></p>
         </form>
     </div>
 

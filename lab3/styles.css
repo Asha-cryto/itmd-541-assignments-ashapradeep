@@ -4,13 +4,28 @@
 }
 
 body {
-    background-color: #e6e6e6;
+    background-color: #b9a119b4;
     margin: 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100vh;
     padding: 20px;
+    position: relative;
+}
+
+.conversion-rates {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
 }
 
 .container {
@@ -20,22 +35,11 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 20px;
-    left: 20px;
 }
 
 h1 {
     text-align: center;
     color: #333;
-}
-
-#conversionRates {
-    font-size: 0.9em;
-    color: #555;
-    text-align: left;
-    margin-bottom: 10px;
-    font-weight: bold;
 }
 
 label {
@@ -62,8 +66,10 @@ input[disabled] {
     margin-left: 10px;
 }
 
-#errorMessage {
+.error-message {
     color: red;
-    text-align: center;
-    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: none;
 }
