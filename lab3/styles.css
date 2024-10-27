@@ -4,26 +4,38 @@
 }
 
 body {
-    background-color: #f0f0f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    background-color: #e6e6e6;
     margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
 }
 
 .container {
     width: 90%;
-    max-width: 400px;
+    max-width: 350px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 h1 {
     text-align: center;
     color: #333;
+}
+
+#conversionRates {
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 label {
@@ -41,7 +53,7 @@ input[type="text"] {
 }
 
 input[disabled] {
-    background-color: #e0e0e0;
+    background-color: #f0f0f0;
     color: #666;
 }
 
@@ -54,11 +66,4 @@ input[disabled] {
     color: red;
     text-align: center;
     font-weight: bold;
-}
-
-#conversionRates {
-    margin-top: 15px;
-    font-size: 0.9em;
-    color: #555;
-    text-align: center;
 }
