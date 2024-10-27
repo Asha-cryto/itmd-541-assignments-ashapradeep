@@ -7,19 +7,23 @@ body {
     background-color: #e6e6e6;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: 100vh;
+    padding: 20px;
+    position: relative;
 }
 
 .container {
-    width: 90%;
-    max-width: 350px;
-    padding: 20px;
-    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px; /* Make the container larger */
+    padding: 30px; /* Increase padding for a larger look */
+    background-color: #ffffffbe;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: absolute;
+    top: 20px; /* Position near the top */
+    left: 20px; /* Position near the left */
 }
 
 .conversion-rates {
