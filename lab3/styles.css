@@ -16,14 +16,14 @@ body {
 
 .container {
     width: 100%;
-    max-width: 500px; /* Make the container larger */
-    padding: 30px; /* Increase padding for a larger look */
-    background-color: #ffffffbe;
+    max-width: 600px; /* Increase the container width */
+    padding: 40px; /* Increase padding for a larger look */
+    background-color: #ffeb3b; /* Set yellow background */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     position: absolute;
-    top: 20px; /* Position near the top */
-    left: 20px; /* Position near the left */
+    top: 20px;
+    left: 20px;
 }
 
 .conversion-rates {
@@ -53,7 +53,7 @@ label {
 
 input[type="text"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px; /* Increase padding for larger input fields */
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
