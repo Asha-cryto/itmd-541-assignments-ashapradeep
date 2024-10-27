@@ -1,21 +1,24 @@
-body {
+* {
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.calculator-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+body {
+    background-color: #f0f0f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
     max-width: 400px;
-    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -23,82 +26,39 @@ h1 {
     color: #333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
 label {
-    margin-top: 10px;
+    margin-top: 15px;
+    display: block;
     font-weight: bold;
 }
 
-input[type="number"], input[type="text"], select {
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-input[type="range"] {
-    margin-top: 5px;
+input[type="text"] {
     width: 100%;
-}
-
-output {
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-#conversionRate {
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #555;
-}
-
-#conversionRate p {
-    margin: 5px 0;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 input[disabled] {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    background-color: #e0e0e0;
+    color: #666;
 }
 
-input:focus {
-    outline: none;
-    border-color: #007bff;
+#tipPercentageDisplay {
+    display: inline-block;
+    margin-left: 10px;
 }
 
-/* Currency Conversion Dropdown at the bottom */
-.currency-converter {
-    margin-top: 30px;
+#errorMessage {
+    color: red;
     text-align: center;
+    font-weight: bold;
 }
-/* Styling for the currency details in the top-right corner */
-.currency-details {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+#conversionRates {
+    margin-top: 15px;
     font-size: 0.9em;
-    color: #333;
-}
-/* Styling for the calculator */
-.calculator-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    margin: 100px auto; /* Centering the calculator */
-}
-/* Currency Conversion Dropdown at the bottom */
-.currency-converter {
-    margin-top: 30px;
+    color: #555;
     text-align: center;
 }
