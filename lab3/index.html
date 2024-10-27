@@ -18,26 +18,36 @@
         <form id="tip-form">
             <h1>Tip Calculator</h1>
 
-            <label for="billAmount">Bill Total:</label>
-            <input type="text" id="billAmount" placeholder="Enter bill amount">
+            <div class="form-group">
+                <label for="billAmount">Bill Total:</label>
+                <input type="text" id="billAmount" placeholder="Enter bill amount">
+            </div>
             <p id="errorMessage" class="error-message"></p> <!-- Error message below Bill Total -->
 
-            <label for="tipPercentage">Tip Percentage:</label>
-            <input type="range" id="tipPercentage" min="0" max="100">
-            <span id="tipPercentageDisplay">0%</span>
+            <div class="form-group">
+                <label for="tipPercentage">Tip Percentage:</label>
+                <input type="range" id="tipPercentage" min="0" max="100">
+                <span id="tipPercentageDisplay">0%</span>
+            </div>
 
-            <label for="tipAmount">Tip Amount:</label>
-            <input type="text" id="tipAmount" disabled>
+            <div class="form-group">
+                <label for="tipAmount">Tip Amount:</label>
+                <input type="text" id="tipAmount" disabled>
+            </div>
 
-            <label for="totalWithTip">Total Bill with Tip:</label>
-            <input type="text" id="totalWithTip" disabled>
+            <div class="form-group">
+                <label for="totalWithTip">Total Bill with Tip:</label>
+                <input type="text" id="totalWithTip" disabled>
+            </div>
 
-            <label for="currency">Currency:</label>
-            <select id="currency">
-                <option value="usd" selected>USD ($)</option>
-                <option value="inr">INR (₹)</option>
-                <option value="jpy">JPY (¥)</option>
-            </select>
+            <div class="form-group">
+                <label for="currency">Currency:</label>
+                <select id="currency">
+                    <option value="usd" selected>USD ($)</option>
+                    <option value="inr">INR (₹)</option>
+                    <option value="jpy">JPY (¥)</option>
+                </select>
+            </div>
         </form>
     </div>
 
