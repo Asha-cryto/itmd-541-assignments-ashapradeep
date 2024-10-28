@@ -1,46 +1,43 @@
-const form = document.getElementById("tip-form");
-const billAmount = document.getElementById("billAmount");
-const tipPercentage = document.getElementById("tipPercentage");
-const tipPercentageDisplay = document.getElementById("tipPercentageDisplay");
-const tipAmount = document.getElementById("tipAmount");
-const totalWithTip = document.getElementById("totalWithTip");
-const currency = document.getElementById("currency");
-const errorMessage = document.getElementById("errorMessage");
+document.getElementById('currency').addEventListener('change', updateCurrencySymbols);
+document.getElementById('billAmount').addEventListener('input', calculateTip);
+document.getElementById('tipPercentage').addEventListener('input', calculateTip);
 
-const conversionRates = {
-    usd: 1,
-    inr: 84.07,
-    jpy: 149.34
-};
-
-function calculateTip() {
-    errorMessage.style.display = "none"; // Hide error message initially
-
-    let billValue = parseFloat(billAmount.value);
-    let tipPercent = parseFloat(tipPercentage.value);
+function updateCurrencySymbols() {
+    const currency = document.getElementById('currency').value;
+    const currencySymbols = {
+        usd: '$',
+        inr: '₹',
+        jpy: '¥'
+    };
     
-    // Check for invalid input and display error if needed
-    if (isNaN(billValue) || billValue < 0) {
-        errorMessage.textContent = "Please enter a valid non-negative number for Bill Total.";
-        errorMessage.style.display = "block"; // Show error message
-        return;
-    }
-
-    // Clear error if input is valid
-    errorMessage.textContent = "";
-
-    // Update tip percentage display
-    tipPercentageDisplay.textContent = tipPercent + "%";
-    let tipValue = billValue * (tipPercent / 100);
-    let totalValue = billValue + tipValue;
-
-    // Convert based on selected currency
-    let currencyValue = conversionRates[currency.value];
-    tipAmount.value = (tipValue * currencyValue).toFixed(2);
-    totalWithTip.value = (totalValue * currencyValue).toFixed(2);
+    const selectedSymbol = currencySymbols[currency];
+    document.getElementById('currencySymbolBill').textContent = selectedSymbol;
+    document.getElementById('currencySymbolTip').textContent = selectedSymbol;
+    document.getElementById('currencySymbolTotal').textContent = selectedSymbol;
+    calculateTip();
 }
 
-// Event listeners for real-time calculations
-billAmount.addEventListener("input", calculateTip);
-tipPercentage.addEventListener("input", calculateTip);
-currency.addEventListener("change", calculateTip);
+function calculateTip() {
+    const billAmount = parseFloat(document.getElementById('billAmount').value);
+    const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
+    const errorMessage = document.getElementById('errorMessage');
+    
+    if (isNaN(billAmount) || billAmount < 0) {
+        errorMessage.textContent = "Please enter a valid non-negative number for Bill Total.";
+        errorMessage.style.display = "block";
+        document.getElementById('tipAmount').value = '';
+        document.getElementById('totalWithTip').value = '';
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+    
+    const tipAmount = billAmount * (tipPercentage / 100);
+    const totalWithTip = billAmount + tipAmount;
+
+    document.getElementById('tipPercentageDisplay').textContent = `${tipPercentage}%`;
+    document.getElementById('tipAmount').value = tipAmount.toFixed(2);
+    document.getElementById('totalWithTip').value = totalWithTip.toFixed(2);
+}
+
+updateCurrencySymbols();

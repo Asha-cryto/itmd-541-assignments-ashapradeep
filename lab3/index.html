@@ -20,6 +20,7 @@
 
             <div class="form-group">
                 <label for="billAmount">Bill Total:</label>
+                <span class="currency-symbol" id="currencySymbolBill">$</span>
                 <input type="text" id="billAmount" placeholder="Enter bill amount">
             </div>
             <p id="errorMessage" class="error-message"></p> <!-- Error message below Bill Total -->
@@ -32,11 +33,13 @@
 
             <div class="form-group">
                 <label for="tipAmount">Tip Amount:</label>
+                <span class="currency-symbol" id="currencySymbolTip">$</span>
                 <input type="text" id="tipAmount" disabled>
             </div>
 
             <div class="form-group">
                 <label for="totalWithTip">Total Bill with Tip:</label>
+                <span class="currency-symbol" id="currencySymbolTotal">$</span>
                 <input type="text" id="totalWithTip" disabled>
             </div>
 

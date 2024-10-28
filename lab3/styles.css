@@ -58,8 +58,13 @@ label {
     flex-basis: 40%; /* Adjusts the width of the label */
 }
 
+.currency-symbol {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
 input[type="text"], input[type="range"], select {
-    width: 55%; /* Adjust the input width */
+    width: 50%; /* Adjust the input width */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
