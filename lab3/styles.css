@@ -60,7 +60,7 @@ label {
     margin-right: 5px;
 }
 
-input[type="text"], select {
+input[type="text"], input[type="range"], select {
     width: 50%; /* Adjust the input width */
     padding: 10px;
     border: 1px solid #ccc;
@@ -68,25 +68,23 @@ input[type="text"], select {
 }
 
 input[type="range"] {
-    width: 50%; /* Adjust the range input width */
-    margin-left: 10px;
-}
-
-/* Change slider color */
-input[type="range"] {
-    -webkit-appearance: none;
-    background: #ddd;
-    border-radius: 5px;
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none; /* Remove default styling */
+    width: 100%; /* Full width for the slider */
+    height: 10px; /* Height of the slider */
+    background: #007bff; /* Blue background for the slider */
+    border-radius: 5px; /* Rounded edges */
+    outline: none; /* Remove outline */
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: blue; /* Slider color */
-    border-radius: 50%;
-    cursor: pointer;
+    -webkit-appearance: none; /* Remove default thumb styling */
+    appearance: none; /* Remove default thumb styling */
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    border-radius: 50%; /* Round thumb */
+    background: #fff; /* White thumb */
+    border: 2px solid #007bff; /* Blue border for the thumb */
 }
 
 input[disabled] {
@@ -94,7 +92,7 @@ input[disabled] {
     color: #666;
 }
 
-#tipDisplay {
+#tipPercentageDisplay {
     display: inline-block;
     margin-left: 10px;
 }
