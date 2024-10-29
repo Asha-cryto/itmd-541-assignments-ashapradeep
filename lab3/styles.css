@@ -64,4 +64,9 @@ input[type="text"], input[type="range"], select {
     width: 50%; /* Input width */
     padding: 10px;
     border: 1px solid #ccc;
-    
+
+#errorMessage {
+        color: red;
+        text-align: center;
+        font-weight: bold;
+    }
