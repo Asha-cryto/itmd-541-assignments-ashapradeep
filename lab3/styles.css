@@ -87,7 +87,7 @@ input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     width: 10px; /* Slider thumb width */
     height: 10px; /* Slider thumb height */
-    background: #007bff; /* Slider thumb color */
+    background: #00a6ff; /* Slider thumb color */
     border-radius: 50%; /* Make thumb round */
     cursor: pointer; /* Pointer cursor on hover */
 }
