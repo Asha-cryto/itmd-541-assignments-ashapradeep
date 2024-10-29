@@ -13,6 +13,11 @@ h1 {
     color: #333;
 }
 
+.lab-info {
+    text-align: left;
+    margin-left: 0; /* Removes any extra centering margin */
+}
+
 body {
     background-color: #e6e6e6;
     margin: 0;
