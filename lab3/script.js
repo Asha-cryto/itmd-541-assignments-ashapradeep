@@ -2,7 +2,6 @@ document.getElementById('currency').addEventListener('change', updateCurrencySym
 document.getElementById('billAmount').addEventListener('input', validateAndCalculateTip);
 document.getElementById('tipPercentage').addEventListener('input', calculateTip);
 
-// Function to update currency symbols based on selection
 function updateCurrencySymbols() {
     const currency = document.getElementById('currency').value;
     const currencySymbols = {
@@ -25,15 +24,14 @@ function updateCurrencySymbols() {
         document.getElementById('totalWithTipLabel').textContent = "Converted Total Bill with Tip:";
     }
 
-    calculateTip(); // Recalculate the tip when the currency changes
+    calculateTip();
 }
 
-// Validate input and calculate tip
 function validateAndCalculateTip() {
     const billAmountInput = document.getElementById('billAmount').value;
     const billAmount = parseFloat(billAmountInput);
     const errorMessage = document.getElementById('errorMessage');
-
+    
     // Check if the input is a non-empty, non-negative number
     if (billAmountInput !== '' && (isNaN(billAmount) || billAmount < 0)) {
         errorMessage.textContent = "Please enter a valid non-negative number for Bill Total.";
@@ -47,19 +45,18 @@ function validateAndCalculateTip() {
         } else {
             document.getElementById('tipAmount').value = '';
             document.getElementById('totalWithTip').value = '';
+            document.getElementById('tipPercentageField').value = '';
         }
     }
 }
 
-// Calculate tip amount and total with tip
 function calculateTip() {
     const billAmount = parseFloat(document.getElementById('billAmount').value);
     const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
     const currency = document.getElementById('currency').value;
 
-    // Update displayed tip percentage
-    document.getElementById('tipDisplay').textContent = `${tipPercentage}%`;
-    document.getElementById('tipPercentageField').value = tipPercentage; // Update the new field for tip percentage
+    // Update the Tip Percentage Field
+    document.getElementById('tipPercentageField').value = `${tipPercentage}%`;
 
     if (!isNaN(billAmount) && billAmount >= 0) {
         const tipAmount = billAmount * (tipPercentage / 100);
@@ -81,6 +78,3 @@ function calculateTip() {
         }
     }
 }
-
-// Initialize currency symbols and set default values
-updateCurrencySymbols();

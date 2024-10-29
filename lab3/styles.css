@@ -89,11 +89,6 @@ input[disabled] {
     color: #666;
 }
 
-#tipPercentageDisplay {
-    display: inline-block;
-    margin-left: 10px;
-}
-
 .error-message {
     color: red;
     font-size: 0.9em;
