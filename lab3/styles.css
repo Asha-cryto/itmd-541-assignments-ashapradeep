@@ -82,29 +82,6 @@ input[type="text"], input[type="range"], select {
     border-radius: 5px;
 }
 
-/* Slider Track (Line) */
-input[type="range"] {
-    -webkit-appearance: none; /* Remove default appearance on WebKit browsers */
-    appearance: none;
-    width: 50%;
-    height: 2px; /* Thinner slider line */
-    background: #ddd;
-    border-radius: 5px;
-    outline: none; /* Remove focus outline */
-    margin: 0; /* Remove default margin */
-}
-
-/* Slider Thumb for WebKit Browsers (Chrome, Safari) */
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px; /* Thumb width */
-    height: 15px; /* Thumb height */
-    background: #007bff; /* Thumb color */
-    border-radius: 50%; /* Make thumb round */
-    cursor: pointer;
-}
-
 
 input[disabled] {
     background-color: #f0f0f0;
