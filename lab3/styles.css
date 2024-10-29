@@ -16,7 +16,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 600px; /* Container width */
+    max-width: 800px; /* Container width */
     padding: 40px; /* Padding */
     background-color: #c3b853; /* Yellow background */
     border-radius: 10px;
