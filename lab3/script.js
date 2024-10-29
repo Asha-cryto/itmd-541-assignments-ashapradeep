@@ -9,11 +9,21 @@ function updateCurrencySymbols() {
         inr: '₹',
         jpy: '¥'
     };
-    
+
     const selectedSymbol = currencySymbols[currency];
     document.getElementById('currencySymbolBill').textContent = selectedSymbol;
     document.getElementById('currencySymbolTip').textContent = selectedSymbol;
     document.getElementById('currencySymbolTotal').textContent = selectedSymbol;
+
+    // Update labels based on currency selection
+    if (currency === 'usd') {
+        document.getElementById('tipAmountLabel').textContent = "Tip Amount:";
+        document.getElementById('totalWithTipLabel').textContent = "Total Bill with Tip:";
+    } else {
+        document.getElementById('tipAmountLabel').textContent = "Converted Tip Amount:";
+        document.getElementById('totalWithTipLabel').textContent = "Converted Total Bill with Tip:";
+    }
+
     calculateTip();
 }
 
@@ -26,7 +36,6 @@ function validateAndCalculateTip() {
     if (billAmountInput !== '' && (isNaN(billAmount) || billAmount < 0)) {
         errorMessage.textContent = "Please enter a valid non-negative number for Bill Total.";
         errorMessage.style.display = "block";
-        // Clear the Tip Amount and Total Bill with Tip fields
         document.getElementById('tipAmount').value = '';
         document.getElementById('totalWithTip').value = '';
     } else {
@@ -34,7 +43,6 @@ function validateAndCalculateTip() {
         if (billAmountInput) {
             calculateTip();
         } else {
-            // Clear fields if no input
             document.getElementById('tipAmount').value = '';
             document.getElementById('totalWithTip').value = '';
         }
@@ -44,15 +52,28 @@ function validateAndCalculateTip() {
 function calculateTip() {
     const billAmount = parseFloat(document.getElementById('billAmount').value);
     const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
-    
-    // Calculate tip amount and total only if billAmount is valid
+    const currency = document.getElementById('currency').value;
+
     if (!isNaN(billAmount) && billAmount >= 0) {
         const tipAmount = billAmount * (tipPercentage / 100);
         const totalWithTip = billAmount + tipAmount;
 
-        document.getElementById('tipPercentageDisplay').textContent = ${tipPercentage}%;
-        document.getElementById('tipAmount').value = tipAmount.toFixed(2);
-        document.getElementById('totalWithTip').value = totalWithTip.toFixed(2);
+        document.getElementById('tipPercentageDisplay').textContent = `${tipPercentage}%`;
+
+        if (currency === 'usd') {
+            document.getElementById('tipAmount').value = tipAmount.toFixed(2);
+            document.getElementById('totalWithTip').value = totalWithTip.toFixed(2);
+        } else {
+            const conversionRates = {
+                inr: 84.07,
+                jpy: 149.34
+            };
+            const convertedTipAmount = tipAmount * conversionRates[currency];
+            const convertedTotalWithTip = totalWithTip * conversionRates[currency];
+
+            document.getElementById('tipAmount').value = convertedTipAmount.toFixed(2);
+            document.getElementById('totalWithTip').value = convertedTotalWithTip.toFixed(2);
+        }
     }
 }
 
