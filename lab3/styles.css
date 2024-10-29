@@ -16,9 +16,9 @@ body {
 
 .container {
     width: 100%;
-    max-width: 800px; /* Container width */
-    padding: 40px; /* Padding */
-    background-color: #c3b853; /* Yellow background */
+    max-width: 800px;
+    padding: 40px;
+    background-color: #c3b853;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     position: absolute;
@@ -46,13 +46,12 @@ h1 {
 
 .form-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     margin-top: 15px;
 }
 
 label {
-    flex-basis: 40%; /* Adjusts the width of the label */
+    margin-bottom: 5px;
 }
 
 .currency-symbol {
@@ -60,27 +59,27 @@ label {
 }
 
 input[type="text"], input[type="range"], select {
-    width: 50%; /* Input width */
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 input[type="range"] {
-    -webkit-appearance: none; /* Remove default appearance */
-    height: 5px; /* Slider height */
-    background: #ddd; /* Slider track color */
+    -webkit-appearance: none;
+    height: 5px;
+    background: #ddd;
     border-radius: 5px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default appearance */
+    -webkit-appearance: none;
     appearance: none;
-    width: 15px; /* Slider thumb width */
-    height: 15px; /* Slider thumb height */
-    background: #007bff; /* Slider thumb color */
-    border-radius: 50%; /* Make thumb round */
-    cursor: pointer; /* Pointer cursor on hover */
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 input[disabled] {
@@ -92,6 +91,5 @@ input[disabled] {
     color: red;
     font-size: 0.9em;
     margin-top: 5px;
-    margin-bottom: 15px;
     display: none;
 }
