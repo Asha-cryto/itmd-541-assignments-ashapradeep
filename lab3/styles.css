@@ -35,7 +35,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 0.85em;
-    font-weight: bold;
     color: #333;
     text-align: left;
 }
@@ -84,4 +83,23 @@ input[disabled] {
     margin-top: 5px;
     margin-bottom: 15px;
     display: none;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%; /* Full-width slider */
+    height: 5px; /* Thin slider */
+    background: #ddd; /* Slider background */
+    border-radius: 5px; /* Round edges */
+    outline: none; /* Remove outline */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; /* Thumb width */
+    height: 15px; /* Thumb height */
+    border-radius: 50%; /* Round thumb */
+    background: #4CAF50; /* Green thumb */
 }

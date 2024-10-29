@@ -15,15 +15,6 @@ function updateCurrencySymbols() {
     document.getElementById('currencySymbolTip').textContent = selectedSymbol;
     document.getElementById('currencySymbolTotal').textContent = selectedSymbol;
 
-    // Update labels based on currency selection
-    if (currency === 'usd') {
-        document.getElementById('tipAmountLabel').textContent = "Tip Amount:";
-        document.getElementById('totalWithTipLabel').textContent = "Total Bill with Tip:";
-    } else {
-        document.getElementById('tipAmountLabel').textContent = "Converted Tip Amount:";
-        document.getElementById('totalWithTipLabel').textContent = "Converted Total Bill with Tip:";
-    }
-
     calculateTip();
 }
 
