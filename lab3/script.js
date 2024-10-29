@@ -63,8 +63,4 @@ function calculateTip() {
         const totalWithTip = billAmount + tipAmount;
 
         if (currency === 'usd') {
-            document.getElementById('tipAmount').value = tipAmount.toFixed(2);
-            document.getElementById('totalWithTip').value = totalWithTip.toFixed(2);
-        } else {
-            const conversionRates = {
-               
+            document.getElementById('tipAmount').value = tipAmount.to
