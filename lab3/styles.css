@@ -64,9 +64,35 @@ input[type="text"], input[type="range"], select {
     width: 50%; /* Input width */
     padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-#errorMessage {
-        color: red;
-        text-align: center;
-        font-weight: bold;
-    }
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default appearance */
+    height: 5px; /* Slider height */
+    background: #ddd; /* Slider track color */
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none;
+    width: 15px; /* Slider thumb width */
+    height: 15px; /* Slider thumb height */
+    background: #007bff; /* Slider thumb color */
+    border-radius: 50%; /* Make thumb round */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[disabled] {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.error-message {
+    color: red; /* Error message text color */
+    font-size: 0.9em; /* Font size of the error message */
+    margin-top: 5px; /* Space above the error message */
+    margin-bottom: 15px; /* Space below the error message */
+    display: none; /* Hidden by default */
+}
