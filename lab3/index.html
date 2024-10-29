@@ -28,17 +28,6 @@
             <p id="errorMessage" class="error-message"></p>
 
             <div class="form-group">
-                <label for="currency">Select Currency:</label>
-                <select id="currency">
-                    <option value="usd" selected>USD ($)</option>
-                    <option value="inr">INR (₹)</option>
-                    <option value="jpy">JPY (¥)</option>
-                </select>
-            </div>
-        </form>
-    </div>
-
-            <div class="form-group">
                 <label for="tip">Tip:</label>
                 <input type="range" id="tipPercentage" min="0" max="100" value="0">
             </div>
@@ -61,6 +50,16 @@
                 <input type="text" id="totalWithTip" disabled>
             </div>
 
+            <div class="form-group">
+                <label for="currency">Select Currency:</label>
+                <select id="currency">
+                    <option value="usd" selected>USD ($)</option>
+                    <option value="inr">INR (₹)</option>
+                    <option value="jpy">JPY (¥)</option>
+                </select>
+            </div>
+        </form>
+    </div>
 
     <script src="script.js"></script>
 </body>
