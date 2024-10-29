@@ -3,6 +3,10 @@
     font-family: Arial, sans-serif;
 }
 
+h4 {
+    font-weight: normal; /* Removes bold styling */
+}
+
 body {
     background-color: #e6e6e6;
     margin: 0;
@@ -68,7 +72,7 @@ input[type="text"], input[type="range"], select {
 
 input[type="range"] {
     -webkit-appearance: none; /* Remove default appearance */
-    height: 5px; /* Slider height */
+    height: 2px; /* Slider height */
     background: #ddd; /* Slider track color */
     border-radius: 5px;
 }
@@ -76,9 +80,9 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Remove default appearance */
     appearance: none;
-    width: 15px; /* Slider thumb width */
-    height: 15px; /* Slider thumb height */
-    background: #007bff; /* Slider thumb color */
+    width: 10px; /* Slider thumb width */
+    height: 10px; /* Slider thumb height */
+    background: #00b3ff; /* Slider thumb color */
     border-radius: 50%; /* Make thumb round */
     cursor: pointer; /* Pointer cursor on hover */
 }
