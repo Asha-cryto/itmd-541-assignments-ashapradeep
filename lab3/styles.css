@@ -95,16 +95,16 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 5px; /* Adjust slider thumb size as needed */
-    height: 5px;
+    width: 10px; /* Adjust slider thumb size as needed */
+    height: 10px;
     background: #007bff;
     border-radius: 50%;
     cursor: pointer;
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
+    width: 5px;
+    height: 5px;
     background: #007bff;
     border-radius: 50%;
     cursor: pointer;
