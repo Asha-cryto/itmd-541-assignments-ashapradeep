@@ -24,8 +24,8 @@
                 <label for="billAmount">Bill Total:</label>
                 <span class="currency-symbol" id="currencySymbolBill">$</span>
                 <input type="text" id="billAmount" placeholder="Enter bill amount">
+                <p id="errorMessage" class="error-message"></p> <!-- Moved here -->
             </div>
-            <p id="errorMessage" class="error-message"></p>
 
             <div class="form-group">
                 <label for="currency">Select Currency:</label>
@@ -41,7 +41,6 @@
                 <input type="range" id="tipPercentage" min="0" max="100" value="0">
             </div>
 
-            <!-- New input field for Tip Percentage -->
             <div class="form-group">
                 <label for="tipPercentageField">Tip Percentage:</label>
                 <input type="text" id="tipPercentageField" disabled>

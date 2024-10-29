@@ -92,7 +92,8 @@ input[disabled] {
 .error-message {
     color: red;
     font-size: 0.9em;
-    margin-top: 5px;
+    margin-top: 5px; /* Space above the error message */
     margin-bottom: 15px;
     display: none;
+    margin-left: 40%; /* Align with the label */
 }
