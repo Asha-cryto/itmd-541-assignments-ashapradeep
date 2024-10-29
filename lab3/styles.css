@@ -23,7 +23,7 @@ h1 {
 }
 
 body {
-    background-color: #e6e6e6;
+    background-color: #7564a64e;
     margin: 0;
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -108,5 +108,8 @@ input[disabled] {
     font-size: 0.9em;
     margin-top: 5px;
     margin-bottom: 15px;
-    display: none;
+    display: none; /* Controls visibility */
+    width: 100%;
+    clear: both; /* Forces it to a new line */
 }
+
