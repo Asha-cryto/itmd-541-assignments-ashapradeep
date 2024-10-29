@@ -2,6 +2,7 @@ document.getElementById('currency').addEventListener('change', updateCurrencySym
 document.getElementById('billAmount').addEventListener('input', validateAndCalculateTip);
 document.getElementById('tipPercentage').addEventListener('input', calculateTip);
 
+// Function to update currency symbols based on selection
 function updateCurrencySymbols() {
     const currency = document.getElementById('currency').value;
     const currencySymbols = {
@@ -24,14 +25,15 @@ function updateCurrencySymbols() {
         document.getElementById('totalWithTipLabel').textContent = "Converted Total Bill with Tip:";
     }
 
-    calculateTip();
+    calculateTip(); // Recalculate the tip when the currency changes
 }
 
+// Validate input and calculate tip
 function validateAndCalculateTip() {
     const billAmountInput = document.getElementById('billAmount').value;
     const billAmount = parseFloat(billAmountInput);
     const errorMessage = document.getElementById('errorMessage');
-    
+
     // Check if the input is a non-empty, non-negative number
     if (billAmountInput !== '' && (isNaN(billAmount) || billAmount < 0)) {
         errorMessage.textContent = "Please enter a valid non-negative number for Bill Total.";
@@ -49,6 +51,7 @@ function validateAndCalculateTip() {
     }
 }
 
+// Calculate tip amount and total with tip
 function calculateTip() {
     const billAmount = parseFloat(document.getElementById('billAmount').value);
     const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
@@ -72,4 +75,13 @@ function calculateTip() {
             const convertedTotalWithTip = totalWithTip * conversionRates[currency];
 
             document.getElementById('tipAmount').value = convertedTipAmount.toFixed(2);
-            document.get
+            document.getElementById('totalWithTip').value = convertedTotalWithTip.toFixed(2);
+        }
+    } else {
+        document.getElementById('tipAmount').value = '';
+        document.getElementById('totalWithTip').value = '';
+    }
+}
+
+// Initial call to set currency symbols and calculate tip if needed
+updateCurrencySymbols();
