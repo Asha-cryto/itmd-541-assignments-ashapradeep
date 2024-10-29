@@ -60,11 +60,33 @@ label {
     margin-right: 5px;
 }
 
-input[type="text"], input[type="range"], select {
+input[type="text"], select {
     width: 50%; /* Adjust the input width */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+input[type="range"] {
+    width: 50%; /* Adjust the range input width */
+    margin-left: 10px;
+}
+
+/* Change slider color */
+input[type="range"] {
+    -webkit-appearance: none;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: blue; /* Slider color */
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 input[disabled] {
@@ -72,7 +94,7 @@ input[disabled] {
     color: #666;
 }
 
-#tipPercentageDisplay {
+#tipDisplay {
     display: inline-block;
     margin-left: 10px;
 }

@@ -54,11 +54,11 @@ function calculateTip() {
     const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
     const currency = document.getElementById('currency').value;
 
+    document.getElementById('tipDisplay').textContent = `${tipPercentage}%`; // Update displayed tip percentage
+
     if (!isNaN(billAmount) && billAmount >= 0) {
         const tipAmount = billAmount * (tipPercentage / 100);
         const totalWithTip = billAmount + tipAmount;
-
-        document.getElementById('tipPercentageDisplay').textContent = `${tipPercentage}%`;
 
         if (currency === 'usd') {
             document.getElementById('tipAmount').value = tipAmount.toFixed(2);
@@ -72,9 +72,4 @@ function calculateTip() {
             const convertedTotalWithTip = totalWithTip * conversionRates[currency];
 
             document.getElementById('tipAmount').value = convertedTipAmount.toFixed(2);
-            document.getElementById('totalWithTip').value = convertedTotalWithTip.toFixed(2);
-        }
-    }
-}
-
-updateCurrencySymbols();
+            document.get
