@@ -68,23 +68,20 @@ input[type="text"], input[type="range"], select {
 }
 
 input[type="range"] {
-    -webkit-appearance: none; /* Remove default styling */
-    appearance: none; /* Remove default styling */
-    width: 100%; /* Full width for the slider */
-    height: 10px; /* Height of the slider */
-    background: #007bff; /* Blue background for the slider */
-    border-radius: 5px; /* Rounded edges */
-    outline: none; /* Remove outline */
+    -webkit-appearance: none; /* Remove default appearance */
+    height: 5px; /* Make the slider thinner */
+    background: #ddd; /* Slider track color */
+    border-radius: 5px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default thumb styling */
-    appearance: none; /* Remove default thumb styling */
-    width: 20px; /* Width of the thumb */
-    height: 20px; /* Height of the thumb */
-    border-radius: 50%; /* Round thumb */
-    background: #fff; /* White thumb */
-    border: 2px solid #007bff; /* Blue border for the thumb */
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none;
+    width: 15px; /* Slider thumb width */
+    height: 15px; /* Slider thumb height */
+    background: #007bff; /* Slider thumb color */
+    border-radius: 50%; /* Make thumb round */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 input[disabled] {
