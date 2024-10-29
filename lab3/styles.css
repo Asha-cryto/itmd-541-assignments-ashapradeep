@@ -4,7 +4,13 @@
 }
 
 h4 {
+    text-align: left;
     font-weight: normal; /* Removes bold styling */
+}
+
+h1 {
+    text-align: left;
+    color: #333;
 }
 
 body {
@@ -43,10 +49,7 @@ body {
     text-align: left;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
+
 
 .form-group {
     display: flex;
