@@ -62,5 +62,6 @@ function calculateTip() {
         const tipAmount = billAmount * (tipPercentage / 100);
         const totalWithTip = billAmount + tipAmount;
 
+        // Format the values based on the currency selected
         if (currency === 'usd') {
-            document.getElementById('tipAmount').value = tipAmount.to
+            document.getElementById('tipAmount').value = tipAmount
