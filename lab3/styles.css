@@ -44,7 +44,6 @@ h1 {
     color: #333;
 }
 
-/* Flexbox for aligning labels and inputs */
 .form-group {
     display: flex;
     justify-content: space-between;
@@ -92,8 +91,7 @@ input[disabled] {
 .error-message {
     color: red;
     font-size: 0.9em;
-    margin-top: 5px; /* Space above the error message */
+    margin-top: 5px;
     margin-bottom: 15px;
     display: none;
-    margin-left: 40%; /* Align with the label */
 }
