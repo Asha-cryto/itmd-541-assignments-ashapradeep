@@ -11,10 +11,12 @@ function updateCurrencySymbols() {
     };
 
     const selectedSymbol = currencySymbols[currency];
-    document.getElementById('currencySymbolBill').textContent = selectedSymbol;
+
+    // Only update the tip and total currency symbols
     document.getElementById('currencySymbolTip').textContent = selectedSymbol;
     document.getElementById('currencySymbolTotal').textContent = selectedSymbol;
 
+    // Update labels based on currency selection
     if (currency === 'usd') {
         document.getElementById('tipAmountLabel').textContent = "Tip Amount:";
         document.getElementById('totalWithTipLabel').textContent = "Total Bill with Tip:";
@@ -53,6 +55,7 @@ function calculateTip() {
     const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
     const currency = document.getElementById('currency').value;
 
+    // Update the Tip Percentage Field
     document.getElementById('tipPercentageField').value = `${tipPercentage}%`;
 
     if (!isNaN(billAmount) && billAmount >= 0) {
