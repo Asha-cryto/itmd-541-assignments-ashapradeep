@@ -3,62 +3,29 @@
     font-family: Arial, sans-serif;
 }
 
-h4 {
-    text-align: left;
-    font-weight: normal; /* Removes bold styling */
-}
-
-.header {
-    text-align: left; /* Ensure all text inside aligns left */
-}
-
-h1 {
-    text-align: left;
-    color: #333;
-}
-
-.lab-info {
-    text-align: left;
-    margin-left: 0; /* Removes any extra centering margin */
-}
-
 body {
-    background-color: #45566c;
+    background-color: #e6e6e6;
     margin: 0;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     height: 100vh;
     padding: 20px;
-    position: relative;
 }
 
 .container {
     width: 100%;
-    max-width: 800px; /* Container width */
-    padding: 40px; /* Padding */
-    background-color: #aaa04c; /* Yellow background */
+    max-width: 650px; /* Increased width */
+    padding: 40px;
+    background-color: #c3b853;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    top: 20px;
-    left: 20px;
 }
 
-.conversion-rates {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #f8f8f8;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 0.85em;
+h1 {
+    text-align: center;
     color: #333;
-    text-align: left;
 }
-
-
 
 .form-group {
     display: flex;
@@ -68,7 +35,7 @@ body {
 }
 
 label {
-    flex-basis: 40%; /* Adjusts the width of the label */
+    flex-basis: 40%;
 }
 
 .currency-symbol {
@@ -76,20 +43,10 @@ label {
 }
 
 input[type="text"], input[type="range"], select {
-    width: 50%; /* Input width */
+    width: 50%;
     padding: 10px;
-    border: 1px solid #3c5e70a3;
+    border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default appearance */
-    appearance: none;
-    width: 10px; /* Slider thumb width */
-    height: 10px; /* Slider thumb height */
-    background: #00a6ff; /* Slider thumb color */
-    border-radius: 50%; /* Make thumb round */
-    cursor: pointer; /* Pointer cursor on hover */
 }
 
 input[disabled] {
@@ -97,10 +54,25 @@ input[disabled] {
     color: #666;
 }
 
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .error-message {
     color: red;
     font-size: 0.9em;
     margin-top: 5px;
-    margin-bottom: 15px;
     display: none;
 }
