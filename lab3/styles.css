@@ -86,7 +86,7 @@ input[type="text"], input[type="range"], select {
 input[type="range"] {
     -webkit-appearance: none; /* Remove default appearance on WebKit browsers */
     appearance: none;
-    width: 100%;
+    width: 50%;
     height: 2px; /* Thinner slider line */
     background: #ddd;
     border-radius: 5px;
@@ -105,23 +105,6 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
-/* Slider Thumb for Firefox */
-input[type="range"]::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    background: #007bff;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Slider Thumb for IE and Edge */
-input[type="range"]::-ms-thumb {
-    width: 15px;
-    height: 15px;
-    background: #007bff;
-    border-radius: 50%;
-    cursor: pointer;
-}
 
 input[disabled] {
     background-color: #f0f0f0;
