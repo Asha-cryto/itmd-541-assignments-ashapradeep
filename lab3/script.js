@@ -22,8 +22,8 @@ function validateAndCalculateTip() {
     const billAmount = parseFloat(billAmountInput);
     const errorMessage = document.getElementById('errorMessage');
     
-    // Check if the input is non-empty, a valid number, and non-negative
-    if (billAmountInput && (isNaN(billAmount) || billAmount < 0)) {
+    // Check if the input is a non-empty, non-negative number
+    if (billAmountInput !== '' && (isNaN(billAmount) || billAmount < 0)) {
         errorMessage.textContent = "Please enter a valid non-negative number for Bill Total.";
         errorMessage.style.display = "block";
         // Clear the Tip Amount and Total Bill with Tip fields

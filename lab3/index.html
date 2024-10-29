@@ -7,50 +7,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="conversion-rates" id="conversionRates">
-            Conversion Rates:<br>
-            $1 USD = ₹84.07 INR<br>
-            $1 USD = ¥149.34 JPY
-        </div>
+    <div class="calculator">
+        <h2>Tip Calculator</h2>
         
-        <form id="tip-form">
-            <h1>Tip Calculator</h1>
+        <div id="conversionRates">
+            <p>Conversion Rates:</p>
+            <p>$1 USD = ₹84.07 INR</p>
+            <p>$1 USD = ¥149.34 JPY</p>
+        </div>
 
-            <div class="form-group">
-                <label for="billAmount">Bill Total:</label>
-                <span class="currency-symbol" id="currencySymbolBill">$</span>
-                <input type="text" id="billAmount" placeholder="Enter bill amount">
-            </div>
-            <p id="errorMessage" class="error-message"></p> <!-- Error message below Bill Total -->
+        <form>
+            <label for="billAmount">Bill Total:</label>
+            <span id="currencySymbolBill"></span>
+            <input type="text" id="billAmount" placeholder="Enter bill amount">
+            <div id="errorMessage" class="error-message"></div>
 
-            <div class="form-group">
-                <label for="tipPercentage">Tip Percentage:</label>
-                <input type="range" id="tipPercentage" min="0" max="100">
-                <span id="tipPercentageDisplay">0%</span>
-            </div>
+            <label for="currency">Currency:</label>
+            <select id="currency">
+                <option value="usd">USD</option>
+                <option value="inr">INR</option>
+                <option value="jpy">JPY</option>
+            </select>
 
-            <div class="form-group">
-                <label for="tipAmount">Tip Amount:</label>
-                <span class="currency-symbol" id="currencySymbolTip">$</span>
-                <input type="text" id="tipAmount" disabled>
-            </div>
+            <label for="tipPercentage">Tip:</label>
+            <input type="range" id="tipPercentage" min="0" max="100" value="15">
+            <span id="tipPercentageDisplay">15%</span>
 
-            <div class="form-group">
-                <label for="totalWithTip">Total Bill with Tip:</label>
-                <span class="currency-symbol" id="currencySymbolTotal">$</span>
-                <input type="text" id="totalWithTip" disabled>
-            </div>
+            <label for="tipAmount">Tip Amount:</label>
+            <span id="currencySymbolTip"></span>
+            <input type="text" id="tipAmount" disabled>
 
-            <div class="form-group">
-                <label for="currency">Currency:</label>
-                <select id="currency">
-                    <option value="usd" selected>USD ($)</option>
-                    <option value="inr">INR (₹)</option>
-                    <option value="jpy">JPY (¥)</option>
-                </select>
-            </div>
+            <label for="totalWithTip">Total Bill with Tip:</label>
+            <span id="currencySymbolTotal"></span>
+            <input type="text" id="totalWithTip" disabled>
         </form>
     </div>
 

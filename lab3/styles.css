@@ -1,89 +1,30 @@
-* {
-    box-sizing: border-box;
+body {
+    background-color: grey;
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #e6e6e6;
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100vh;
+.calculator {
+    background-color: yellow;
+    width: 350px;
     padding: 20px;
-    position: relative;
-}
-
-.container {
-    width: 100%;
-    max-width: 600px; /* Increase the container width */
-    padding: 40px; /* Increase padding for a larger look */
-    background-color: #ffeb3b; /* Set yellow background */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
     position: absolute;
     top: 20px;
     left: 20px;
 }
 
-.conversion-rates {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #f8f8f8;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 0.85em;
-    font-weight: bold;
-    color: #333;
-    text-align: left;
-}
-
-h1 {
+h2 {
     text-align: center;
-    color: #333;
-}
-
-/* Flexbox for aligning labels and inputs */
-.form-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
+    font-weight: normal;
 }
 
 label {
-    font-weight: bold;
-    flex-basis: 40%; /* Adjusts the width of the label */
-}
-
-.currency-symbol {
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-input[type="text"], input[type="range"], select {
-    width: 50%; /* Adjust the input width */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[disabled] {
-    background-color: #f0f0f0;
-    color: #666;
-}
-
-#tipPercentageDisplay {
     display: inline-block;
-    margin-left: 10px;
+    width: 120px;
+    margin-bottom: 10px;
 }
 
-.error-message {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    display: none;
-}
+input[type="text"]:disabled {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px
