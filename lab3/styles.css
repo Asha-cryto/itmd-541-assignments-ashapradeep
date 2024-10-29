@@ -72,19 +72,30 @@ input[type="text"], input[type="range"], select {
 
 input[type="range"] {
     -webkit-appearance: none;
-    height: 1px; /* Thinner slider line */
+    appearance: none;
+    height: 2px; /* Set to desired thin height */
     background: #ddd;
-    border-radius: 2px;
+    border-radius: 5px;
+    outline: none; /* Remove focus outline */
+    margin: 0; /* Remove any default margin */
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default appearance */
+    -webkit-appearance: none;
     appearance: none;
-    width: 10px; /* Slider thumb width */
-    height: 10px; /* Slider thumb height */
-    background: #00b3ff; /* Slider thumb color */
-    border-radius: 50%; /* Make thumb round */
-    cursor: pointer; /* Pointer cursor on hover */
+    width: 15px; /* Adjust slider thumb size as needed */
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 input[disabled] {
