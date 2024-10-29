@@ -11,8 +11,7 @@ function updateCurrencySymbols() {
     };
 
     const selectedSymbol = currencySymbols[currency];
-
-    // Only update the tip and total currency symbols
+    document.getElementById('currencySymbolBill').textContent = selectedSymbol;
     document.getElementById('currencySymbolTip').textContent = selectedSymbol;
     document.getElementById('currencySymbolTotal').textContent = selectedSymbol;
 
@@ -33,6 +32,7 @@ function validateAndCalculateTip() {
     const billAmount = parseFloat(billAmountInput);
     const errorMessage = document.getElementById('errorMessage');
     
+    // Check if the input is a non-empty, non-negative number
     if (billAmountInput !== '' && (isNaN(billAmount) || billAmount < 0)) {
         errorMessage.textContent = "Please enter a valid number";
         errorMessage.style.display = "block";

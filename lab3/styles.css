@@ -7,21 +7,29 @@ body {
     background-color: #e6e6e6;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: 100vh;
+    padding: 20px;
+    position: relative;
 }
 
 .container {
     width: 100%;
-    max-width: 600px;
-    padding: 40px;
-    background-color: #c3b853;
+    max-width: 800px; /* Container width */
+    padding: 40px; /* Padding */
+    background-color: #c3b853; /* Yellow background */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 .conversion-rates {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background-color: #f8f8f8;
     padding: 5px 10px;
     border: 1px solid #ccc;
@@ -29,7 +37,6 @@ body {
     font-size: 0.85em;
     color: #333;
     text-align: left;
-    margin-bottom: 20px;
 }
 
 h1 {
@@ -39,39 +46,41 @@ h1 {
 
 .form-group {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-top: 15px;
-    gap: 10px;
 }
 
 label {
-    flex-basis: 40%;
-    text-align: right;
-}
-
-.input-container {
-    display: flex;
-    align-items: center;
-    width: 60%;
+    flex-basis: 40%; /* Adjusts the width of the label */
 }
 
 .currency-symbol {
     margin-right: 5px;
 }
 
-input[type="text"], select {
-    width: 100%;
-    padding: 8px;
+input[type="text"], input[type="range"], select {
+    width: 50%; /* Input width */
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 input[type="range"] {
-    width: 100%;
-    height: 5px;
-    background: #ddd;
+    -webkit-appearance: none; /* Remove default appearance */
+    height: 5px; /* Slider height */
+    background: #ddd; /* Slider track color */
     border-radius: 5px;
-    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none;
+    width: 15px; /* Slider thumb width */
+    height: 15px; /* Slider thumb height */
+    background: #007bff; /* Slider thumb color */
+    border-radius: 50%; /* Make thumb round */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 input[disabled] {
@@ -82,7 +91,7 @@ input[disabled] {
 .error-message {
     color: red;
     font-size: 0.9em;
-    text-align: center;
     margin-top: 5px;
+    margin-bottom: 15px;
     display: none;
 }
