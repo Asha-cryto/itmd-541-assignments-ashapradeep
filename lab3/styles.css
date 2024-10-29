@@ -46,26 +46,27 @@ h1 {
 
 .form-group {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     margin-top: 15px;
 }
 
 label {
-    margin-bottom: 5px;
+    flex-basis: 40%;
 }
 
-.currency-symbol {
-    margin-right: 5px;
+.currency-symbol, input[type="text"], input[type="range"], select {
+    margin-left: 10px;
 }
 
-input[type="text"], input[type="range"], select {
-    width: 100%;
+input[type="text"], select {
+    width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 input[type="range"] {
+    width: 50%;
     -webkit-appearance: none;
     height: 5px;
     background: #ddd;
@@ -92,4 +93,5 @@ input[disabled] {
     font-size: 0.9em;
     margin-top: 5px;
     display: none;
+    padding-left: 40%; /* Aligns the error message with the input field */
 }
