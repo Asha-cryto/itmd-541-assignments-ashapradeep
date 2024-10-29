@@ -71,6 +71,4 @@ function calculateTip() {
                 jpy: 149.34
             };
             const convertedTipAmount = tipAmount * conversionRates[currency];
-            const convertedTotalWithTip = totalWithTip * conversionRates[currency];
-
-            document.getElementById('tipAmount').value = convertedTipAmount.toFixed
+            const convertedTotalWithTip = totalWithTip

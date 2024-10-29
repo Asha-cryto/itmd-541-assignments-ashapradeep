@@ -7,23 +7,19 @@ body {
     background-color: #e6e6e6;
     margin: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* Center the container */
     align-items: flex-start;
     height: 100vh;
     padding: 20px;
-    position: relative;
 }
 
 .container {
     width: 100%;
-    max-width: 600px; /* Increase the container width */
+    max-width: 700px; /* Increase the container width */
     padding: 40px; /* Increase padding for a larger look */
     background-color: #c3b853; /* Set yellow background */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    top: 20px;
-    left: 20px;
 }
 
 .conversion-rates {
@@ -61,7 +57,7 @@ label {
 }
 
 input[type="text"], input[type="range"], select {
-    width: 50%; /* Adjust the input width */
+    width: 55%; /* Adjust the input width for better visibility */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
