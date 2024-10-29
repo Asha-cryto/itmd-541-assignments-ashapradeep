@@ -64,4 +64,5 @@ function calculateTip() {
 
         // Format the values based on the currency selected
         if (currency === 'usd') {
-            document.getElementById('tipAmount').value = tipAmount
+            document.getElementById('tipAmount').value = tipAmount.toFixed(2); // Format to 2 decimal places
+            document.getElementById('total
