@@ -85,9 +85,9 @@ input[type="text"], input[type="range"], select {
 input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
-    height: 2px; /* Set to desired thin height */
+    height: 0px; /* Set to desired thin height */
     background: #ddd;
-    border-radius: 5px;
+    border-radius: 0cm;
     outline: none; /* Remove focus outline */
     margin: 0; /* Remove any default margin */
 }
@@ -95,8 +95,8 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px; /* Adjust slider thumb size as needed */
-    height: 15px;
+    width: 5px; /* Adjust slider thumb size as needed */
+    height: 5px;
     background: #007bff;
     border-radius: 50%;
     cursor: pointer;
