@@ -1,6 +1,6 @@
 document.getElementById('currency').addEventListener('change', updateCurrencySymbols);
 document.getElementById('billAmount').addEventListener('input', validateAndCalculateTip);
-document.getElementById('tipPercentage').addEventListener('input', calculateTip);
+document.getElementById('tip').addEventListener('input', calculateTip);
 
 function updateCurrencySymbols() {
     const currency = document.getElementById('currency').value;
@@ -45,22 +45,20 @@ function validateAndCalculateTip() {
         } else {
             document.getElementById('tipAmount').value = '';
             document.getElementById('totalWithTip').value = '';
-            document.getElementById('tipPercentageField').value = '';
         }
     }
 }
 
 function calculateTip() {
     const billAmount = parseFloat(document.getElementById('billAmount').value);
-    const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
+    const tipPercentage = parseFloat(document.getElementById('tip').value);
     const currency = document.getElementById('currency').value;
-
-    // Update the Tip Percentage Field
-    document.getElementById('tipPercentageField').value = `${tipPercentage}%`;
 
     if (!isNaN(billAmount) && billAmount >= 0) {
         const tipAmount = billAmount * (tipPercentage / 100);
         const totalWithTip = billAmount + tipAmount;
+
+        document.getElementById('tipDisplay').textContent = `${tipPercentage}%`;
 
         if (currency === 'usd') {
             document.getElementById('tipAmount').value = tipAmount.toFixed(2);
@@ -78,3 +76,5 @@ function calculateTip() {
         }
     }
 }
+
+updateCurrencySymbols();
