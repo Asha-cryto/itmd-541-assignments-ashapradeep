@@ -16,8 +16,8 @@ body {
 
 .container {
     width: 100%;
-    max-width: 800px; /* Increased container width */
-    padding: 50px; /* Increased padding for a larger look */
+    max-width: 600px; /* Container width */
+    padding: 40px; /* Padding */
     background-color: #c3b853; /* Yellow background */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
@@ -90,9 +90,9 @@ input[disabled] {
 }
 
 .error-message {
-    color: red; /* Error message text color */
-    font-size: 0.9em; /* Font size of the error message */
-    margin-top: 5px; /* Space above the error message */
-    margin-bottom: 15px; /* Space below the error message */
-    display: none; /* Hidden by default */
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: none;
 }
