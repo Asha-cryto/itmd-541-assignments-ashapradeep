@@ -27,4 +27,15 @@ label {
 input[type="text"]:disabled {
     background-color: #f0f0f0;
     color: #555;
-    border: 1px
+    border: 1px solid #ccc;
+}
+
+#conversionRates {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
