@@ -72,9 +72,9 @@ input[type="text"], input[type="range"], select {
 
 input[type="range"] {
     -webkit-appearance: none; /* Remove default appearance */
-    height: 2px; /* Slider height */
+    height: 0px; /* Slider height */
     background: #ddd; /* Slider track color */
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
