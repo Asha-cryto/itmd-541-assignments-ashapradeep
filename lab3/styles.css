@@ -12,12 +12,6 @@ h4 {
     text-align: left; /* Ensure all text inside aligns left */
 }
 
-.header h4, .header h1 {
-    margin: 0; /* Remove any default margin that may affect positioning */
-    padding: 0;
-    text-align: left;
-}
-
 h1 {
     text-align: left;
     color: #333;
