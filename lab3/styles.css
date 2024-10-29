@@ -82,6 +82,15 @@ input[type="text"], input[type="range"], select {
     border-radius: 5px;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default appearance */
+    appearance: none;
+    width: 10px; /* Slider thumb width */
+    height: 10px; /* Slider thumb height */
+    background: #007bff; /* Slider thumb color */
+    border-radius: 50%; /* Make thumb round */
+    cursor: pointer; /* Pointer cursor on hover */
+}
 
 input[disabled] {
     background-color: #f0f0f0;
