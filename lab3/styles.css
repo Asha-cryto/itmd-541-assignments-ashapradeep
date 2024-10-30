@@ -23,7 +23,7 @@ h1 {
 }
 
 body {
-    background-color: #36125ee1;
+    background-color: #e6e6e6;
     margin: 0;
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -35,7 +35,7 @@ body {
     width: 100%;
     max-width: 650px; /* Adjust container width as needed */
     padding: 40px; /* Padding */
-    background-color: #ffd500; /* Yellow background */
+    background-color: #fff700; /* Yellow background */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 
@@ -55,7 +55,7 @@ body {
     position: absolute;
     top: 10px; /* Adjust vertical positioning */
     right: 10px; /* Position to the right inside container */
-    background-color: #c9f2f0;
+    background-color: #f8f8f8;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -64,7 +64,6 @@ body {
     text-align: left;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .form-group {
     display: flex;
@@ -108,37 +107,7 @@ input[disabled] {
     font-size: 0.9em;
     margin-top: 5px;
     margin-bottom: 15px;
-    display: none; /* Controls visibility */
-    width: 100%;
-    clear: both; /* Forces it to a new line */
+    display: none;
 }
 
-/* Responsive styles for screens smaller than 1500px */
-@media (max-width: 1500px) {
-    body {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .container {
-        width: 95%; /* Adjust width for screens up to 1500px */
-        padding: 15px;
-        max-width: 600px;
-    }
-
-    .form-group {
-        align-items: flex-start;
-    }
-
-    label {
-        font-size: 1em; /* Keep label readable */
-    }
-
-    .conversion-rates {
-        font-size: 0.85em;
-        top: 5px;
-        right: 5px;
-        position: static; /* Ensures it aligns with main layout on smaller screens */
-        margin-bottom: 10px;
-    }
-}
