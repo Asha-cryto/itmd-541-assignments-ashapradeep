@@ -113,8 +113,8 @@ input[disabled] {
     clear: both; /* Forces it to a new line */
 }
 
-/* Media query for screens smaller than 1500px */
-@media (max-width: 1500px) {
+/* Media query for screens smaller than 200px */
+@media (max-width: 200px) {
     .container {
         padding: 15px;
     }
