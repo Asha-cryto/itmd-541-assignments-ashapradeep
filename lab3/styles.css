@@ -139,6 +139,6 @@ input[disabled] {
         top: 5px;
         right: 5px;
         position: static; /* Ensures it aligns with main layout on smaller screens */
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
 }
