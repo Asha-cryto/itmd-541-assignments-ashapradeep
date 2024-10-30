@@ -113,3 +113,20 @@ input[disabled] {
     clear: both; /* Forces it to a new line */
 }
 
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    .form-group {
+        align-items: flex-start;
+    }
+    label {
+        font-size: 0.9em;
+    }
+    .conversion-rates {
+        font-size: 0.75em;
+        top: 5px;
+        right: 5px;
+    }
+}
