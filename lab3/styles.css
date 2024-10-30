@@ -135,10 +135,10 @@ input[disabled] {
     }
 
     .conversion-rates {
-        font-size: 0.50em;
+        font-size: 0.85em;
         top: 5px;
         right: 5px;
         position: static; /* Ensures it aligns with main layout on smaller screens */
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 }
