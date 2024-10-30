@@ -113,20 +113,32 @@ input[disabled] {
     clear: both; /* Forces it to a new line */
 }
 
-/* Media query for screens smaller than 200px */
-@media (max-width: 200px) {
-    .container {
-        padding: 10px;
+/* Responsive styles for screens smaller than 1500px */
+@media (max-width: 1500px) {
+    body {
+        flex-direction: column;
+        align-items: center;
     }
+
+    .container {
+        width: 95%; /* Adjust width for screens up to 1500px */
+        padding: 15px;
+        max-width: 600px;
+    }
+
     .form-group {
         align-items: flex-start;
     }
+
     label {
-        font-size: 0.9em;
+        font-size: 1em; /* Keep label readable */
     }
+
     .conversion-rates {
-        font-size: 0.75em;
-        top: 2px;
-        right: 2px;
+        font-size: 0.85em;
+        top: 5px;
+        right: 5px;
+        position: static; /* Ensures it aligns with main layout on smaller screens */
+        margin-bottom: 10px;
     }
 }
