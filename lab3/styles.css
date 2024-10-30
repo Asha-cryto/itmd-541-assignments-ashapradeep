@@ -23,7 +23,7 @@ h1 {
 }
 
 body {
-    background-color: #7464a666;
+    background-color: #592b8e66;
     margin: 0;
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -35,7 +35,7 @@ body {
     width: 100%;
     max-width: 650px; /* Adjust container width as needed */
     padding: 40px; /* Padding */
-    background-color: #fff700; /* Yellow background */
+    background-color: #ffd500; /* Yellow background */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 
