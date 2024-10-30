@@ -116,7 +116,7 @@ input[disabled] {
 /* Media query for screens smaller than 200px */
 @media (max-width: 200px) {
     .container {
-        padding: 15px;
+        padding: 10px;
     }
     .form-group {
         align-items: flex-start;
@@ -126,7 +126,7 @@ input[disabled] {
     }
     .conversion-rates {
         font-size: 0.75em;
-        top: 5px;
-        right: 5px;
+        top: 2px;
+        right: 2px;
     }
 }
