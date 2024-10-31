@@ -35,14 +35,14 @@ body {
 
 .container {
     width: 100%;
-    max-width: 800px; /* Adjust container width as needed */
+    max-width: 700px; /* Adjust container width as needed */
     padding: 40px;
     background-color: #c3b853;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     text-align: left;
     position: relative;
-    min-height: 600px; /* Set a larger height for the container */
+
 }
 
 
@@ -54,7 +54,7 @@ body {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 2px;
-    font-size: 0.50em;
+    font-size: 0.70em;
     color: #333;
     text-align: left;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
