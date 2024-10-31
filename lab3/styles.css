@@ -106,3 +106,61 @@ input[disabled] {
 }
 
 
+/* General styling for mobile-first */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px; /* Add padding for smaller screens */
+    margin: 0;
+    background-color: hwb(240 21% 63%);
+}
+
+.container {
+    width: 100%;
+    max-width: 90%; /* Set max-width to 90% for smaller screens */
+    padding: 20px; /* Reduce padding for mobile devices */
+    background-color: #fff700;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    align-items: flex-start; /* Align items to the start for better mobile view */
+    margin-top: 15px;
+}
+
+label {
+    flex-basis: auto; /* Allow labels to take full width in smaller screens */
+    width: 100%; /* Full width for labels */
+    margin-bottom: 5px; /* Add spacing below label */
+}
+
+input[type="text"], input[type="range"], select {
+    width: 100%; /* Full width for input elements on smaller screens */
+    padding: 10px;
+    border: 1px solid #3c5e70a3;
+    border-radius: 5px;
+}
+
+/* Larger screens adjustments */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .form-group {
+        flex-direction: row; /* Default to horizontal layout on tablets */
+        align-items: center;
+    }
+
+    label {
+        flex-basis: 40%;
+    }
+
+    input[type="text"], select {
+        width: 50%;
+    }
+}
