@@ -110,62 +110,62 @@ input[disabled] {
     display: none;
 }
 
-/* General styling for mobile-first */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 10px; /* Add padding for smaller screens */
-    margin: 0;
-    background-color: hwb(240 21% 63%);
-}
+/* Ensure the layout is mobile-first */
 
+/* Adjust container for smaller screens */
 .container {
-    width: 100%;
-    max-width: 90%; /* Set max-width to 90% for smaller screens */
-    padding: 20px; /* Reduce padding for mobile devices */
-    background-color: #fff700;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    max-width: 90%; /* For mobile */
+    padding: 20px;
+    position: relative;
 }
 
+/* Currency conversion adjustment for small screens */
+.conversion-rates {
+    position: relative;
+    top: auto;
+    right: auto;
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.85em;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Aligning the currency symbol with the input field */
 .form-group {
-    flex-direction: column; /* Stack items vertically for smaller screens */
-    align-items: flex-start; /* Align items to the start for better mobile view */
+    display: flex;
+    align-items: center;
     margin-top: 15px;
 }
 
+/* Ensure label, symbol, and input align well */
 label {
-    flex-basis: auto; /* Allow labels to take full width in smaller screens */
-    width: 100%; /* Full width for labels */
-    margin-bottom: 5px; /* Add spacing below label */
+    flex-basis: 30%; /* Label takes 30% of the space */
 }
 
-input[type="text"], input[type="range"], select {
-    width: 100%; /* Full width for input elements on smaller screens */
+.currency-symbol {
+    margin-right: 5px;
+    display: inline-block;
+    width: 10%;
+    text-align: center; /* Center align symbol */
+}
+
+input[type="text"], select {
+    width: 60%; /* Input takes 60% of the space */
     padding: 10px;
     border: 1px solid #3c5e70a3;
     border-radius: 5px;
 }
 
-/* Larger screens adjustments */
+/* Adjustments for larger screens */
 @media (min-width: 768px) {
     .container {
         max-width: 600px;
     }
-
-    .form-group {
-        flex-direction: row; /* Default to horizontal layout on tablets */
-        align-items: center;
-    }
-
-    label {
-        flex-basis: 40%;
-    }
-
-    input[type="text"], select {
-        width: 50%;
-    }
-}
-
+    
+    .conversion-rates {
+        position: absolute;
+        top: 10px; /* Adjusted top for
