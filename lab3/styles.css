@@ -105,46 +105,6 @@ input[disabled] {
     display: none;
 }
 
-/* Base Styles */
-
-* {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: hwb(240 21% 63%);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    width: 100%;
-    max-width: 700px;
-    padding: 40px;
-    background-color: #c3b853;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
-    position: relative;
-}
-
-.conversion-rates {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #c3b853;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    font-size: 0.70em;
-    color: #333;
-    text-align: left;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
 
 /* Adjustments for smaller screens */
 @media (max-width: 600px) {
@@ -153,8 +113,11 @@ body {
         max-width: 90%;
     }
 
+    h4 {
+        font-size: 1em;
+    }
     h1 {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .form-group {
