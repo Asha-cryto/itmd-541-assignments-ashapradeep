@@ -126,25 +126,6 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-.form-group {
-    flex-direction: column; /* Stack items vertically for smaller screens */
-    align-items: flex-start; /* Align items to the start for better mobile view */
-    margin-top: 15px;
-}
-
-label {
-    flex-basis: auto; /* Allow labels to take full width in smaller screens */
-    width: 100%; /* Full width for labels */
-    margin-bottom: 5px; /* Add spacing below label */
-}
-
-input[type="text"], input[type="range"], select {
-    width: 100%; /* Full width for input elements on smaller screens */
-    padding: 10px;
-    border: 1px solid #3c5e70a3;
-    border-radius: 5px;
-}
-
 /* Larger screens adjustments */
 @media (min-width: 768px) {
     .container {
