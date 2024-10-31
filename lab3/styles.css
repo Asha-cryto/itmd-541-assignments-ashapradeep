@@ -23,7 +23,7 @@ h1 {
 }
 
 body {
-    background-color: #e6e6e6;
+    background-color: hwb(240 21% 63%);
     margin: 0;
     display: flex;
     justify-content: center; /* Center horizontally */
