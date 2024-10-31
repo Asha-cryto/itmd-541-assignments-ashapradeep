@@ -39,8 +39,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     text-align: left;
-    position: relative; /* For positioning child elements */
+    position: relative;
+    min-height: 600px; /* Set a larger height for the container */
 }
+
 
 .conversion-rates {
     position: absolute;
