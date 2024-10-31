@@ -46,16 +46,13 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     text-align: left;
     position: relative;
-    height: 800px; /* Increase height as desired */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space out contents vertically */
+
 
 }
 
 
 .conversion-rates {
-    position: static; /* Adjusts position inside container */
+    position: absolute;
     top: 10px; /* Adjust vertical positioning */
     right: 10px; /* Position to the right inside container */
     background-color: #c3b853;
@@ -113,59 +110,3 @@ input[disabled] {
     display: none;
 }
 
-
-/* Adjustments for smaller screens */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-        max-width: 90%;
-    }
-
-
-    .form-group {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    label, .currency-symbol {
-        flex-basis: auto;
-    }
-
-    input[type="text"], input[type="range"], select {
-        width: 100%;
-    }
-
-    .conversion-rates {
-        font-size: 0.6em;
-        top: 5px;
-        right: 5px;
-    }
-    
-}
-
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    .container {
-        font-size: 14px; /* Smaller font size for container on mobile */
-        height: auto; /* Allow auto height on mobile */
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 1em;
-    }
-    
-    h4 {
-        font-size: 0.9em;
-    }
-    
-    label, input[type="text"], select, .conversion-rates {
-        font-size: 0.9em;
-    }
-
-    .error-message {
-        font-size: 0.8em;
-    }
-    
-
-}
