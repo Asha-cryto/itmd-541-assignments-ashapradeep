@@ -14,6 +14,10 @@ h4 {
     text-align: left; /* Ensure all text inside aligns left */
 }
 
+h4 {
+    margin-top: 0; /* Removes extra margin for the title */
+}
+
 h1 {
     text-align: left;
     color: #333;
@@ -42,12 +46,16 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     text-align: left;
     position: relative;
+    height: 800px; /* Increase height as desired */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out contents vertically */
 
 }
 
 
 .conversion-rates {
-    position: absolute;
+    position: static; /* Adjusts position inside container */
     top: 10px; /* Adjust vertical positioning */
     right: 10px; /* Position to the right inside container */
     background-color: #c3b853;
