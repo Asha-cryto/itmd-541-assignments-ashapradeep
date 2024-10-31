@@ -33,16 +33,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 650px; /* Adjust container width as needed */
-    padding: 40px; /* Padding */
-    background-color: #fff700; /* Yellow background */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-
-}
-
-.container {
-    max-width: 600px;
+    max-width: 800px; /* Adjust container width as needed */
     padding: 40px;
     background-color: #c3b853;
     border-radius: 10px;
@@ -55,7 +46,7 @@ body {
     position: absolute;
     top: 10px; /* Adjust vertical positioning */
     right: 10px; /* Position to the right inside container */
-    background-color: #f8f8f8;
+    background-color: #6ab3b7;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -110,62 +101,4 @@ input[disabled] {
     display: none;
 }
 
-/* Ensure the layout is mobile-first */
 
-/* Adjust container for smaller screens */
-.container {
-    max-width: 90%; /* For mobile */
-    padding: 20px;
-    position: relative;
-}
-
-/* Currency conversion adjustment for small screens */
-.conversion-rates {
-    position: relative;
-    top: auto;
-    right: auto;
-    background-color: #f8f8f8;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 0.85em;
-    color: #333;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* Aligning the currency symbol with the input field */
-.form-group {
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-}
-
-/* Ensure label, symbol, and input align well */
-label {
-    flex-basis: 30%; /* Label takes 30% of the space */
-}
-
-.currency-symbol {
-    margin-right: 5px;
-    display: inline-block;
-    width: 10%;
-    text-align: center; /* Center align symbol */
-}
-
-input[type="text"], select {
-    width: 60%; /* Input takes 60% of the space */
-    padding: 10px;
-    border: 1px solid #3c5e70a3;
-    border-radius: 5px;
-}
-
-/* Adjustments for larger screens */
-@media (min-width: 768px) {
-    .container {
-        max-width: 600px;
-    }
-    
-    .conversion-rates {
-        position: absolute;
-        top: 10px; /* Adjusted top for
