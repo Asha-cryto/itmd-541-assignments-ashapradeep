@@ -47,17 +47,16 @@ body {
 
 
 .conversion-rates {
-    position: absolute;
-    top: 10px; /* Adjust vertical positioning */
-    right: 10px; /* Position to the right inside container */
-    background-color: #c3b853;
+    position: relative;
+    top: auto;
+    right: auto;
+    background-color: #f8f8f8;
     padding: 5px 10px;
     border: 1px solid #ccc;
-    border-radius: 2px;
-    font-size: 0.50em;
+    border-radius: 5px;
+    font-size: 0.85em;
     color: #333;
-    text-align: left;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Adds space between the conversion box and <h4> */
 }
 
 .form-group {
