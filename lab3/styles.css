@@ -112,29 +112,50 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 10px; /* Add padding for smaller screens */
+    padding: 10px;
     margin: 0;
     background-color: hwb(240 21% 63%);
 }
 
 .container {
     width: 100%;
-    max-width: 90%; /* Set max-width to 90% for smaller screens */
-    padding: 20px; /* Reduce padding for mobile devices */
+    max-width: 90%;
+    padding: 20px;
     background-color: #c3b853;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Larger screens adjustments */
+/* Form group styling for single-line alignment */
+.form-group {
+    display: flex;
+    flex-direction: row; /* Keeps label and input in the same line */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Label and input adjustments for mobile */
+label {
+    flex-basis: 35%; /* Controls label width */
+    margin-right: 10px;
+}
+
+.currency-symbol {
+    margin-right: 5px;
+}
+
+input[type="text"], select {
+    width: 60%; /* Adjusts input width to fit alongside label */
+    padding: 10px;
+    border: 1px solid #3c5e70a3;
+    border-radius: 5px;
+}
+
+/* Adjustments for larger screens */
 @media (min-width: 768px) {
     .container {
         max-width: 600px;
-    }
-
-    .form-group {
-        flex-direction: row; /* Default to horizontal layout on tablets */
-        align-items: center;
     }
 
     label {
@@ -144,4 +165,6 @@ body {
     input[type="text"], select {
         width: 50%;
     }
+}
+
 }
