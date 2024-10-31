@@ -113,12 +113,6 @@ input[disabled] {
         max-width: 90%;
     }
 
-    h4 {
-        font-size: 1em;
-    }
-    h1 {
-        font-size: 1em;
-    }
 
     .form-group {
         flex-direction: column;
@@ -137,5 +131,29 @@ input[disabled] {
         font-size: 0.6em;
         top: 5px;
         right: 5px;
+    }
+    
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container {
+        font-size: 14px; /* Smaller font size for container on mobile */
+    }
+    
+    h1 {
+        font-size: 1em;
+    }
+    
+    h4 {
+        font-size: 0.9em;
+    }
+    
+    label, input[type="text"], select, .conversion-rates {
+        font-size: 0.9em;
+    }
+
+    .error-message {
+        font-size: 0.8em;
     }
 }
