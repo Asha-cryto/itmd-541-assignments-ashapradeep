@@ -147,6 +147,8 @@ input[disabled] {
 @media (max-width: 600px) {
     .container {
         font-size: 14px; /* Smaller font size for container on mobile */
+        height: auto; /* Allow auto height on mobile */
+        padding: 20px;
     }
     
     h1 {
@@ -164,4 +166,6 @@ input[disabled] {
     .error-message {
         font-size: 0.8em;
     }
+    
+
 }
