@@ -136,6 +136,7 @@ input[disabled] {
         background-color: #c3b853;
         border: 1px solid #ccc;
         border-radius: 5px;
+        bottom: left;
         
     }
 
