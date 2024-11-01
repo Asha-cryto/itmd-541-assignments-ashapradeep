@@ -123,23 +123,26 @@ input[disabled] {
 
     .conversion-rates {
         font-size: 0.6em;
-        top: 5px;
-        right: 5px;
+        top: auto;  /* Remove top positioning */
+        right: auto; /* Remove right positioning */
+        position: relative; /* Use relative positioning */
+        margin-top: 20px; /* Add space above the conversion box */
+        text-align: center; /* Center-align content */
     }
 
     .form-group {
-        flex-direction: row; /* Keep labels and input on the same line */
+        flex-direction: row;
         align-items: center;
     }
 
     label {
-        flex-basis: 45%; /* Adjust label width */
+        flex-basis: 45%;
         text-align: left;
         margin-bottom: 0;
     }
 
     input[type="text"], input[type="range"], select {
-        width: 50%; /* Adjust input width to fit beside the label */
+        width: 50%;
         padding: 8px;
         font-size: 0.9em;
     }
