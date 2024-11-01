@@ -118,6 +118,7 @@ input[disabled] {
     }
     .header {
         text-align: left; /* Ensure all text inside aligns left */
+    }
     h4 {
         text-align: left;
     }
@@ -127,7 +128,7 @@ input[disabled] {
     }
 
     .conversion-rates {
-        position: static; /* Reset to flow below the container */
+        position: relative; /* Reset to flow below the container */
         margin-top: 20px; /* Add spacing above the conversion box */
         padding: 10px;
         font-size: 0.8em;
