@@ -116,7 +116,8 @@ input[disabled] {
         padding: 20px;
         width: 90%;
     }
-
+    .header {
+        text-align: left; /* Ensure all text inside aligns left */
     h4 {
         text-align: left;
     }
