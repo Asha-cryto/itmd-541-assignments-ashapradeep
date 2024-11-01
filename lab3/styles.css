@@ -130,10 +130,11 @@ input[disabled] {
         margin-top: 20px; /* Add spacing above the conversion box */
         padding: 10px;
         font-size: 0.8em;
-        text-align: center; /* Center-align content */
+        text-align: left; /* Center-align content */
         background-color: #c3b853;
         border: 1px solid #ccc;
         border-radius: 5px;
+        
     }
 
     .form-group {
