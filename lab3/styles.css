@@ -118,13 +118,12 @@ input[disabled] {
     }
 
     h1, h4 {
-        text-align: center;
+        text-align: left;
     }
 
     .conversion-rates {
         font-size: 0.6em;
-        bottom: auto;  
-        left: auto; 
+        bottom: left;  /
         position: relative; /* Use relative positioning */
         margin-top: 20px; /* Add space above the conversion box */
         text-align: center; /* Center-align content */
