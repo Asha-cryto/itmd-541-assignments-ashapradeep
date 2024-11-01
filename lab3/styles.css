@@ -117,16 +117,23 @@ input[disabled] {
         width: 90%;
     }
 
-    h1, h4 {
+    h4 {
+        text-align: left;
+    }
+
+    h1 {
         text-align: left;
     }
 
     .conversion-rates {
-        font-size: 0.6em;
-        bottom: left;  /
-        position: relative; /* Use relative positioning */
-        margin-top: 20px; /* Add space above the conversion box */
+        position: static; /* Reset to flow below the container */
+        margin-top: 20px; /* Add spacing above the conversion box */
+        padding: 10px;
+        font-size: 0.8em;
         text-align: center; /* Center-align content */
+        background-color: #c3b853;
+        border: 1px solid #ccc;
+        border-radius: 5px;
     }
 
     .form-group {
