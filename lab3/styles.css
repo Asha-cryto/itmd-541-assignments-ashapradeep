@@ -128,7 +128,7 @@ input[disabled] {
     }
 
     .conversion-rates {
-        position: relative; /* Reset to flow below the container */
+        position: absolute; /* Reset to flow below the container */
         margin-top: 20px; /* Add spacing above the conversion box */
         padding: 10px;
         font-size: 0.8em;
