@@ -123,8 +123,8 @@ input[disabled] {
 
     .conversion-rates {
         font-size: 0.6em;
-        top: auto;  /* Remove top positioning */
-        right: auto; /* Remove right positioning */
+        bottom: auto;  
+        left: auto; 
         position: relative; /* Use relative positioning */
         margin-top: 20px; /* Add space above the conversion box */
         text-align: center; /* Center-align content */
