@@ -128,18 +128,20 @@ input[disabled] {
     }
 
     .form-group {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row; /* Keep labels and input on the same line */
+        align-items: center;
     }
 
     label {
-        flex-basis: 100%;
+        flex-basis: 45%; /* Adjust label width */
         text-align: left;
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
 
     input[type="text"], input[type="range"], select {
-        width: 100%;
+        width: 50%; /* Adjust input width to fit beside the label */
+        padding: 8px;
+        font-size: 0.9em;
     }
 
     .currency-symbol {
